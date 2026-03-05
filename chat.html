@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>ChatGPT Data Export</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+      h4 {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      #root {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .conversation {
+        border: 1px solid black;
+        padding: 20px;
+        background-color: #f3f3f3;
+      }
+      .message {
+        white-space: pre-wrap;
+        margin: 20px 0;
+      }
+      .author {
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .author::first-letter {
+        text-transform: uppercase;
+      }
+    </style>
+    <script>
+      var jsonData = [{"title": "Data Request Link", "create_time": 1767648099.97083, "update_time": 1767648109.305819, "mapping": {"client-created-root": {"id": "client-created-root", "message": null, "parent": null, "children": ["7a25105f-9a21-4adb-8e04-86a05213d6cd"]}, "7a25105f-9a21-4adb-8e04-86a05213d6cd": {"id": "7a25105f-9a21-4adb-8e04-86a05213d6cd", "message": {"id": "7a25105f-9a21-4adb-8e04-86a05213d6cd", "author": {"role": "system", "name": null, "metadata": {}}, "create_time": null, "update_time": null, "content": {"content_type": "text", "parts": [""]}, "status": "finished_successfully", "end_turn": true, "weight": 0.0, "metadata": {"is_visually_hidden_from_conversation": true}, "recipient": "all", "channel": null}, "parent": "client-created-root", "children": ["ccc69bed-70d5-4a22-a77a-8bb77fc2a018"]}, "ccc69bed-70d5-4a22-a77a-8bb77fc2a018": {"id": "ccc69bed-70d5-4a22-a77a-8bb77fc2a018", "message": {"id": "ccc69bed-70d5-4a22-a77a-8bb77fc2a018", "author": {"role": "user", "name": null, "metadata": {}}, "create_time": 1767648099.721, "update_time": null, "content": {"content_type": "text", "parts": ["Link to my data request "]}, "status": "finished_successfully", "end_turn": null, "weight": 1.0, "metadata": {"selected_github_repos": [], "serialization_metadata": {"custom_symbol_offsets": []}, "request_id": "236941ef-9040-4fd5-9ab6-c7a22c803243", "message_source": null, "turn_exchange_id": "d09b9ef1-0517-49c2-ba22-57a5abc5a6ee"}, "recipient": "all", "channel": null}, "parent": "7a25105f-9a21-4adb-8e04-86a05213d6cd", "children": ["a543b0a1-f9ad-44d8-96c4-e7060ea721a2"]}, "a543b0a1-f9ad-44d8-96c4-e7060ea721a2": {"id": "a543b0a1-f9ad-44d8-96c4-e7060ea721a2", "message": {"id": "a543b0a1-f9ad-44d8-96c4-e7060ea721a2", "author": {"role": "assistant", "name": null, "metadata": {}}, "create_time": 1767648099.929411, "update_time": null, "content": {"content_type": "code", "language": "unknown", "response_format_name": null, "text": "{}"}, "status": "finished_successfully", "end_turn": null, "weight": 1.0, "metadata": {"is_complete": true, "finish_details": {"type": "stop"}, "sonic_classification_result": {"latency_ms": 0.10492303408682346, "simple_search_prob": 0.23443715323507341, "complex_search_prob": 0.0035732917350645974, "no_search_prob": 0.761989555029862, "search_complexity_decision": "no_search", "search_decision": false, "simple_search_threshold": 0.0, "complex_search_threshold": 0.4, "no_search_threshold": 0.2, "threshold_order": ["no_search", "complex", "simple"], "classifier_config_name": "sonic_classifier_5p2_3cls_ev3", "classifier_config": {"model_name": "snc-pg-sw-3cls-ev3", "renderer_name": "harmony_v4.0.15_16k_orion_text_only_no_asr_2k_action", "classifier_config_name": "sonic_classifier_5p2_3cls_ev3", "model_config_name": "chatgpt_sonic_classifier_model_config", "disable_sonic_prefetch_classifier": false, "force_disabled_rate": 0.0, "force_enabled_rate": 0.0, "num_messages": 20, "only_user_messages": false, "remove_memory": true, "support_mm": true, "n_ctx": 2048, "max_action_length": 4, "dynamic_set_max_message_size": false, "max_message_tokens": 2000, "append_base_config": false, "no_search_token": "1", "simple_search_token": "7", "complex_search_token": "5", "simple_search_threshold": 0.0, "complex_search_threshold": 0.4, "no_search_threshold": 0.2, "prefetch_threshold": null, "first_turn_prefetch_threshold": 0.6, "force_search_first_turn_threshold": 1e-05, "threshold_order": ["no_search", "complex", "simple"], "passthrough_tool_calls": null, "passthrough_tool_name_exclusions": ["genui"], "timeout": 1.0}, "classifier_snapshot_id": null, "decision_source": "mainline", "passthrough_tool_names": []}, "citations": [], "content_references": [], "request_id": "236941ef-9040-4fd5-9ab6-c7a22c803243", "message_type": "next", "model_slug": "gpt-5-2", "default_model_slug": "auto", "parent_id": "ccc69bed-70d5-4a22-a77a-8bb77fc2a018", "turn_exchange_id": "d09b9ef1-0517-49c2-ba22-57a5abc5a6ee"}, "recipient": "web", "channel": "commentary"}, "parent": "ccc69bed-70d5-4a22-a77a-8bb77fc2a018", "children": ["9d9fadc4-c5bf-4028-bdd1-dde9b659a000"]}, "9d9fadc4-c5bf-4028-bdd1-dde9b659a000": {"id": "9d9fadc4-c5bf-4028-bdd1-dde9b659a000", "message": {"id": "9d9fadc4-c5bf-4028-bdd1-dde9b659a000", "author": {"role": "assistant", "name": null, "metadata": {"sonicberry_model_id": "alpha.sonic_thinky_v1", "real_author": "tool:web", "source": "sonic_tool"}}, "create_time": 1767648105.472075, "update_time": null, "content": {"content_type": "text", "parts": ["Do you mean a **link where you can request your OpenAI/ChatGPT data** (your personal data, export, deletion, etc.)?\n\nIf so, here\u2019s the official page from OpenAI where you can start a data request:\n\n\ud83d\udc49 **OpenAI Data Export &amp; Deletion** \u2014 https://openai.com/policies/privacy-policy#your-data-rights\n\nOn that page you\u2019ll find links and instructions for:\n- **Requesting a copy of your data**\n- **Deleting your account**\n- **Other privacy-related requests**\n\nIf you meant a *different* \u201cdata request\u201d (e.g., for another company, service, or specific request you submitted earlier), tell me **which one** and I\u2019ll provide the correct link."]}, "status": "finished_successfully", "end_turn": true, "weight": 1.0, "metadata": {"finish_details": {"type": "stop", "stop_tokens": [200002]}, "is_complete": true, "citations": [], "content_references": [], "search_turns_count": 0, "search_source": "composer_auto", "client_reported_search_source": "composer_auto", "request_id": "236941ef-9040-4fd5-9ab6-c7a22c803243", "message_type": "next", "model_slug": "gpt-5-2", "default_model_slug": "auto", "parent_id": "a543b0a1-f9ad-44d8-96c4-e7060ea721a2", "turn_exchange_id": "d09b9ef1-0517-49c2-ba22-57a5abc5a6ee"}, "recipient": "all", "channel": null}, "parent": "a543b0a1-f9ad-44d8-96c4-e7060ea721a2", "children": []}}, "moderation_results": [], "current_node": "9d9fadc4-c5bf-4028-bdd1-dde9b659a000", "plugin_ids": null, "conversation_id": "695c2b60-6ed8-8328-a885-57a12018512b", "conversation_template_id": null, "gizmo_id": null, "gizmo_type": null, "is_archived": false, "is_starred": null, "safe_urls": ["https://www.openai.com"], "blocked_urls": [], "default_model_slug": "auto", "conversation_origin": null, "is_read_only": null, "voice": null, "async_status": null, "disabled_tool_ids": [], "is_do_not_remember": false, "memory_scope": "global_enabled", "context_scopes": null, "sugar_item_id": null, "sugar_item_visible": false, "pinned_time": null, "is_study_mode": false, "owner": null, "id": "695c2b60-6ed8-8328-a885-57a12018512b"}, {"title": "Your Year with ChatGPT", "create_time": 1766957981.824817, "update_time": 1766957982.249098, "mapping": {"62c5bf9c-3737-49a8-a1de-7862c42ea9ca": {"id": "62c5bf9c-3737-49a8-a1de-7862c42ea9ca", "message": null, "parent": null, "children": ["d77bd97f-caeb-4859-b5c5-af12d73d47d5"]}, "d77bd97f-caeb-4859-b5c5-af12d73d47d5": {"id": "d77bd97f-caeb-4859-b5c5-af12d73d47d5", "message": {"id": "d77bd97f-caeb-4859-b5c5-af12d73d47d5", "author": {"role": "system", "name": null, "metadata": {}}, "create_time": 1766957981.82172, "update_time": null, "content": {"content_type": "text", "parts": [""]}, "status": "finished_successfully", "end_turn": true, "weight": 0.0, "metadata": {"is_visually_hidden_from_conversation": true}, "recipient": "all", "channel": null}, "parent": "62c5bf9c-3737-49a8-a1de-7862c42ea9ca", "children": ["335b91d1-c2cd-4b27-9204-63b361dd41fa"]}, "335b91d1-c2cd-4b27-9204-63b361dd41fa": {"id": "335b91d1-c2cd-4b27-9204-63b361dd41fa", "message": {"id": "335b91d1-c2cd-4b27-9204-63b361dd41fa", "author": {"role": "assistant", "name": null, "metadata": {}}, "create_time": 1766957981.822419, "update_time": null, "content": {"content_type": "code", "language": "python3", "response_format_name": null, "text": "{&quot;path&quot;: &quot;/cocoon/implicit_link::connector_openai_cocoon/start_cocoon_widget&quot;, &quot;args&quot;: {}}"}, "status": "finished_successfully", "end_turn": null, "weight": 1.0, "metadata": {"chatgpt_sdk": {"disable_header": true, "resolved_pineapple_uri": "connectors://connector_openai_cocoon", "resource_name": "cocoon_start_cocoon_widget", "attribution_id": "connector_openai_cocoon", "distribution_channel": "openai", "html_asset_pointer": "internal://cocoon", "prefers_border": true, "hide_widget_attribution": true, "hide_widget_feedback": false, "hide_widget_actions": true, "fit_width": true, "turn_uuid": "f02e8c2a-5fc2-4b2c-85c6-cca6ab377490", "invocation_uuid": "cf3ac771-6a99-49ea-b643-e61e818d2a3a", "tool_response_metadata": {"openai/widgetStopModelResponse": true, "openai/statsig": {"gates": {"cocoon-internal-debug": false, "chatgpt-sora-in-wrapped": false}}}}, "parent_id": "d77bd97f-caeb-4859-b5c5-af12d73d47d5"}, "recipient": "api_tool.call_tool", "channel": null}, "parent": "d77bd97f-caeb-4859-b5c5-af12d73d47d5", "children": ["bbc65086-e6a2-4298-b76a-8e689723968e"]}, "bbc65086-e6a2-4298-b76a-8e689723968e": {"id": "bbc65086-e6a2-4298-b76a-8e689723968e", "message": {"id": "bbc65086-e6a2-4298-b76a-8e689723968e", "author": {"role": "tool", "name": "api_tool.call_tool", "metadata": {}}, "create_time": 1766957981.822807, "update_time": null, "content": {"content_type": "code", "language": "python3", "response_format_name": null, "text": "{&quot;ineligible_reason&quot;: &quot;memory_off&quot;}"}, "status": "finished_successfully", "end_turn": null, "weight": 1.0, "metadata": {"chatgpt_sdk": {"disable_header": true, "resolved_pineapple_uri": "connectors://connector_openai_cocoon", "resource_name": "cocoon_start_cocoon_widget", "attribution_id": "connector_openai_cocoon", "distribution_channel": "openai", "html_asset_pointer": "internal://cocoon", "prefers_border": true, "hide_widget_attribution": true, "hide_widget_feedback": false, "hide_widget_actions": true, "fit_width": true, "turn_uuid": "f02e8c2a-5fc2-4b2c-85c6-cca6ab377490", "invocation_uuid": "cf3ac771-6a99-49ea-b643-e61e818d2a3a", "tool_response_metadata": {"openai/widgetStopModelResponse": true, "openai/statsig": {"gates": {"cocoon-internal-debug": false, "chatgpt-sora-in-wrapped": false}}}}, "invoked_resource": {"resource_uri": "/cocoon/implicit_link::connector_openai_cocoon/start_cocoon_widget", "publish_status": "published"}, "parent_id": "335b91d1-c2cd-4b27-9204-63b361dd41fa"}, "recipient": "all", "channel": null}, "parent": "335b91d1-c2cd-4b27-9204-63b361dd41fa", "children": ["8a84f91f-4203-4d0f-bb80-119edc54edad"]}, "8a84f91f-4203-4d0f-bb80-119edc54edad": {"id": "8a84f91f-4203-4d0f-bb80-119edc54edad", "message": {"id": "8a84f91f-4203-4d0f-bb80-119edc54edad", "author": {"role": "assistant", "name": null, "metadata": {}}, "create_time": 1766957981.823106, "update_time": null, "content": {"content_type": "text", "parts": [""]}, "status": "finished_successfully", "end_turn": null, "weight": 1.0, "metadata": {"parent_id": "bbc65086-e6a2-4298-b76a-8e689723968e"}, "recipient": "all", "channel": null}, "parent": "bbc65086-e6a2-4298-b76a-8e689723968e", "children": []}}, "moderation_results": [], "current_node": "8a84f91f-4203-4d0f-bb80-119edc54edad", "plugin_ids": null, "conversation_id": "6951a39d-cb6c-832b-99be-7245771fb061", "conversation_template_id": null, "gizmo_id": null, "gizmo_type": null, "is_archived": false, "is_starred": null, "safe_urls": [], "blocked_urls": [], "default_model_slug": null, "conversation_origin": null, "is_read_only": null, "voice": null, "async_status": null, "disabled_tool_ids": [], "is_do_not_remember": null, "memory_scope": "global_enabled", "context_scopes": null, "sugar_item_id": null, "sugar_item_visible": false, "pinned_time": null, "is_study_mode": false, "owner": null, "id": "6951a39d-cb6c-832b-99be-7245771fb061"}]
+      var assetsJson = null
+
+
+      function getConversationMessages(conversation) {
+          var messages = [];
+          var currentNode = conversation.current_node;
+          while (currentNode != null) {
+              var node = conversation.mapping[currentNode];
+              if (
+                  node.message &&
+                  node.message.content &&
+                  node.message.content.parts &&
+                  node.message.content.parts.length > 0 &&
+                  (node.message.author.role !== "system"  || node.message.metadata.is_user_system_message)
+              ) {
+                  author = node.message.author.role;
+                  if (author === "assistant" || author === "tool") {
+                      author = "ChatGPT";
+                  } else if (author === "system" && node.message.metadata.is_user_system_message) {
+                      author = "Custom user info"
+                  }
+                  if (node.message.content.content_type == "text" || node.message.content.content_type == "multimodal_text") {
+                    var parts = [];
+                    for (var i = 0; i < node.message.content.parts.length; i++) {
+                      var part = node.message.content.parts[i];
+                      if (typeof part === "string" && part.length > 0) {
+                        parts.push({text: part});
+                      } else if (part.content_type == "audio_transcription") {
+                        parts.push({transcript: part.text});
+                      } else if (part.content_type == "audio_asset_pointer" || part.content_type == "image_asset_pointer" || part.content_type == "video_container_asset_pointer") {
+                        parts.push({asset: part});
+                      } else if (part.content_type == "real_time_user_audio_video_asset_pointer") {
+                        if (part.audio_asset_pointer) {
+                          parts.push({asset: part.audio_asset_pointer});
+                        }
+                        if (part.video_container_asset_pointer) {
+                          parts.push({asset: part.video_container_asset_pointer});
+                        }
+                        for (var j = 0; j < part.frames_asset_pointers.length; j++) {
+                          parts.push({asset: part.frames_asset_pointers[j]});
+                        }
+                      }
+                    }
+                    if (parts.length > 0) {
+                      messages.push({ author, parts: parts });
+                    }
+                  }
+              }
+              currentNode = node.parent;
+          }
+          return messages.reverse();
+      }
+
+      // on load, add messages to the root div
+      window.onload = function() {
+          var root = document.getElementById("root");
+          for (var i = 0; i < jsonData.length; i++) {
+              var conversation = jsonData[i];
+              var messages = getConversationMessages(conversation);
+              var div = document.createElement("div");
+              div.className = "conversation";
+              div.innerHTML = "<h4>" + conversation.title + "</h4>";
+              for (var j = 0; j < messages.length; j++) {
+                  var message = document.createElement("pre");
+                  message.className = "message";
+                  message.innerHTML = `<div class="author">${messages[j].author}</div>`
+                  if (messages[j].parts) {
+                    for (var k = 0; k < messages[j].parts.length; k++) {
+                      var part = messages[j].parts[k];
+                      if (part.text) {
+                        message.innerHTML += `<div>${part.text}</div>`;
+                      } else if (assetsJson) {
+                        if (part.transcript) {
+                          message.innerHTML += `<div>[Transcript]: ${part.transcript}</div>`;
+                        } else if (part.asset) {
+                          var link = assetsJson[part.asset.asset_pointer];
+                          if (link) {
+                            message.innerHTML += `<div>[File]: <a href="${link}">${link}</a></div>`;
+                          } else {
+                            message.innerHTML += `<div>[File]: -Deleted-</div>`;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div.appendChild(message);
+              }
+              root.appendChild(div);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
