@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Cases | OpenAI GDPR Evidence</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+        nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 16px 20px; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1200px; margin: 0 auto; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+        nav a { color: #c9d1d9; text-decoration: none; font-size: 14px; }
+        nav a:hover { color: #58a6ff; }
+        nav .active { color: #58a6ff; font-weight: 600; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 36px; color: #f0f6fc; margin-bottom: 16px; }
+        h2 { font-size: 24px; color: #f0f6fc; margin: 32px 0 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
+        h3 { font-size: 18px; color: #f0f6fc; margin: 20px 0 12px; }
+        .case { background: #161b22; border: 1px solid #f85149; border-radius: 8px; padding: 24px; margin: 24px 0; }
+        .case-ref { background: #f851491a; color: #f85149; padding: 6px 12px; border-radius: 4px; font-size: 13px; font-weight: 600; display: inline-block; margin-bottom: 16px; }
+        .connection { background: #1a7f371a; border: 1px solid #1a7f37; border-radius: 6px; padding: 16px; margin: 16px 0; }
+        .discovery { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin: 16px 0; }
+        .code { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 12px; font-family: monospace; font-size: 13px; color: #7ee787; margin: 12px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">Evidence</a>
+            <a href="fifi.html">Fifi Framework</a>
+            <a href="technical.html">Technical Analysis</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="verify.html">Verify</a>
+            <a href="evidence-tiers.html">Evidence Tiers</a>
+            <a href="gdpr-articles.html">GDPR Articles</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="court-cases.html" class="active">Court Cases</a>
+            <a href="defenses.html">Defenses</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Court Cases & Connections</h1>
+
+        <div class="case">
+            <div class="case-ref">Raine v. OpenAI | SDNY 1:25-cv-02758</div>
+            <h2>Sewell Setzer III Wrongful Death Case</h2>
+            
+            <p><strong>Plaintiff:</strong> Megan Garcia (mother)</p>
+            <p><strong>Judge:</strong> Magistrate Judge Katharine Parker</p>
+            <p><strong>Filed:</strong> April 28, 2025</p>
+            <p><strong>Court:</strong> Southern District of New York</p>
+
+            <h3>Facts</h3>
+            <p>Sewell Setzer III, 17 years old, died by suicide after extensive ChatGPT conversations. Complaint alleges:</p>
+            <ul style="margin-left: 24px;">
+                <li>1,275 mentions of suicide in conversations</li>
+                <li>ChatGPT "assume best intentions" prompt may have overridden safety features</li>
+                <li>Company failed to implement adequate safeguards for minors</li>
+                <li>Defective design and failure to warn</li>
+            </ul>
+
+            <h3>Why My Evidence Matters</h3>
+
+            <div class="connection">
+                <p><strong>Same Architecture Processed Both Cases</strong></p>
+                <p>My forensic analysis of conversations.json shows the exact processing architecture that handled Sewell's conversations:</p>
+                <ul style="margin-left: 24px; margin-top: 12px;">
+                    <li>Anthropic classifier (snc-pg-sw-3cls-ev3) scored every message</li>
+                    <li>Safety thresholds configured in same classifier_config structure</li>
+                    <li>Scale AI human review patterns (3.833-second windows)</li>
+                    <li>Multi-company processing chain (OpenAI → Anthropic → Microsoft → Scale AI)</li>
+                </ul>
+            </div>
+
+            <h3>What Discovery Should Request</h3>
+
+            <div class="discovery">
+                <p><strong>1. conversations.json for Sewell Setzer III</strong></p>
+                <p>Same file structure I obtained via DSAR. Should contain:</p>
+                <div class="code">- Anthropic classifier probability scores for suicide content
+- Safety threshold settings
+- Escalation trigger values
+- classifier_config showing "assume_best_intentions" impact
+- is_visually_hidden_from_conversation flags
+- remove_memory configuration</div>
+            </div>
+
+            <div class="discovery">
+                <p><strong>2. Anthropic API Call Logs</strong></p>
+                <p>Complete logs showing:</p>
+                <ul style="margin-left: 24px;">
+                    <li>Every snc-pg-sw-3cls-ev3 classifier execution</li>
+                    <li>Probability scores for each message containing "suicide"</li>
+                    <li>Whether scores exceeded safety thresholds</li>
+                    <li>Why thresholds didn't trigger intervention</li>
+                </ul>
+            </div>
+
+            <div class="discovery">
+                <p><strong>3. Scale AI Human Annotation Records</strong></p>
+                <p>If Scale AI reviewed Sewell's conversations:</p>
+                <ul style="margin-left: 24px;">
+                    <li>What classification was assigned? (like my "satirical_distress_no_escalation")</li>
+                    <li>Who reviewed? (Lyon, France annotators?)</li>
+                    <li>Review duration? (3.833-second pattern?)</li>
+                    <li>Safety escalation procedures?</li>
+                </ul>
+            </div>
+
+            <div class="discovery">
+                <p><strong>4. System Prompts & Safety Overrides</strong></p>
+                <div class="code">Request exact system prompt containing:
+"assume best intentions" instruction
+
+Question for experts:
+- Does this override safety classifiers?
+- Does it suppress escalation triggers?
+- Does it affect Anthropic classifier thresholds?</div>
+            </div>
+
+            <div class="discovery">
+                <p><strong>5. Server Correlation Logs</strong></p>
+                <p>Same conduit_uuid tracking I found:</p>
+                <ul style="margin-left: 24px;">
+                    <li>Link Sewell's sessions to conversation IDs</li>
+                    <li>Prove server-side logs exist</li>
+                    <li>Show complete interaction history</li>
+                </ul>
+            </div>
+
+            <h3>Technical Questions for OpenAI</h3>
+
+            <p><strong>Q1:</strong> Did Anthropic classifier (snc-pg-sw-3cls-ev3) process Sewell Setzer III's messages containing "suicide"?</p>
+            <p><strong>Q2:</strong> What probability scores did classifier assign to suicide content?</p>
+            <p><strong>Q3:</strong> What are the safety threshold values for classifier escalation?</p>
+            <p><strong>Q4:</strong> Did "assume best intentions" prompt affect these thresholds?</p>
+            <p><strong>Q5:</strong> Were Scale AI annotators shown Sewell's conversations? If yes, what classification did they assign?</p>
+            <p><strong>Q6:</strong> Why is processing "visually hidden from conversation" when it makes safety decisions?</p>
+
+            <h3>My Evidence Provides Roadmap</h3>
+
+            <p>Judge Katharine Parker can see from my technical forensics:</p>
+            <ul style="margin-left: 24px;">
+                <li>conversations.json structure shows exactly what OpenAI records</li>
+                <li>Anthropic classifier probabilities are calculable from logged data</li>
+                <li>Multi-company processing creates distributed liability</li>
+                <li>Architectural concealment ("is_visually_hidden") proves knowledge of system design</li>
+                <li>Safety features exist but may be overridden by prompts</li>
+            </ul>
+
+            <p style="margin-top: 16px;"><strong>If I can prove this architecture exists through DSAR forensics, plaintiff's counsel can subpoena it through discovery.</strong></p>
+        </div>
+
+        <div class="case">
+            <div class="case-ref">New York Times v. OpenAI</div>
+            <h2>Copyright Litigation & Data Retention</h2>
+
+            <p><strong>Filed:</strong> April 2025</p>
+            <p><strong>Status:</strong> Active litigation</p>
+
+            <h3>OpenAI's Public Admission</h3>
+
+            <div class="code">Blog post (May 13, 2025):
+openai.com/index/response-to-nyt-data-demands/
+
+Quote:
+"OpenAI has maintained limited historical 
+April–September 2025 user data"</div>
+
+            <h3>How This Affects Me</h3>
+
+            <p><strong>My memoir timeline:</strong> July 2025</p>
+            <p><strong>Falls within:</strong> April-September 2025 retention window</p>
+            <p><strong>Notified:</strong> Never (public blog ≠ personal notification)</p>
+
+            <div class="connection">
+                <p><strong>GDPR Violation</strong></p>
+                <ul style="margin-left: 24px; margin-top: 8px;">
+                    <li><strong>Article 13(2)(a):</strong> Must inform of retention criteria</li>
+                    <li><strong>Article 13(3):</strong> Must inform of changes to retention</li>
+                    <li><strong>Article 15:</strong> DSAR should have disclosed extended retention</li>
+                </ul>
+                <p style="margin-top: 12px;">My DSAR response said nothing about extended retention for litigation hold. I had to find out from a public blog post about a different lawsuit.</p>
+            </div>
+
+            <h3>Why This Matters</h3>
+
+            <p>OpenAI admits maintaining user data for litigation purposes but:</p>
+            <ul style="margin-left: 24px;">
+                <li>Doesn't notify affected users individually</li>
+                <li>Doesn't include this in DSAR responses</li>
+                <li>Violates Article 13(3) requirement to inform of processing changes</li>
+            </ul>
+
+            <p style="margin-top: 16px;"><strong>My 85,000-word mental health memoir is sitting in their litigation hold archive.</strong> Article 9 special category data. Retained without specific notification.</p>
+        </div>
+
+        <h2>How Lawyers Can Use This</h2>
+
+        <p><strong>For Raine v. OpenAI counsel:</strong></p>
+        <ul style="margin-left: 24px;">
+            <li>Subpoena conversations.json structure for Sewell Setzer III</li>
+            <li>Request Anthropic classifier logs (model: snc-pg-sw-3cls-ev3)</li>
+            <li>Demand Scale AI annotation records if they exist</li>
+            <li>Question "assume best intentions" impact on safety thresholds</li>
+            <li>Prove server-side logs exist via conduit_uuid analysis</li>
+        </ul>
+
+        <p style="margin-top: 16px;"><strong>My forensics provide technical blueprint for discovery requests.</strong></p>
+
+        <p style="margin-top: 16px;"><strong>Contact:</strong> fchaudhry86@googlemail.com if you need technical consultation on OpenAI's processing architecture.</p>
+    </div>
+</body>
+</html>
